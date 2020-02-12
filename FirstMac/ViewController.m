@@ -7,12 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "Masonry.h"
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     NSView *view = [[NSView alloc] initWithFrame:NSMakeRect(10, 20, 100, 50)];
     [self.view addSubview:view];
     view.wantsLayer = true;
@@ -25,6 +26,10 @@
     button.title = @"myButton";
     button.target = self;
     button.action = @selector(buttonClick:);
+    
+    [button mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.mas_equalTo(self.view);
+    }];
 }
 
 - (void)buttonClick:(id)sender{

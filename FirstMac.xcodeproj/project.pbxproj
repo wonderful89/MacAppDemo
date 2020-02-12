@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		702D6D1330F5A1AC1AC5AC76 /* Pods_FirstMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1749C6E1E51B7FF0B714E3DE /* Pods_FirstMac.framework */; };
 		7817583E23F3D118006117D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817583D23F3D118006117D4 /* AppDelegate.m */; };
 		7817584123F3D118006117D4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817584023F3D118006117D4 /* ViewController.m */; };
 		7817584323F3D11D006117D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7817584223F3D11D006117D4 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1749C6E1E51B7FF0B714E3DE /* Pods_FirstMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirstMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7817583923F3D118006117D4 /* FirstMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7817583C23F3D118006117D4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7817583D23F3D118006117D4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -25,6 +27,8 @@
 		7817584723F3D11D006117D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7817584823F3D11D006117D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7817584A23F3D11D006117D4 /* FirstMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FirstMac.entitlements; sourceTree = "<group>"; };
+		90CF2446E2781165DF7B6DDB /* Pods-FirstMac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstMac.debug.xcconfig"; path = "Target Support Files/Pods-FirstMac/Pods-FirstMac.debug.xcconfig"; sourceTree = "<group>"; };
+		EE7DA647D7D1D83FB035B3A1 /* Pods-FirstMac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstMac.release.xcconfig"; path = "Target Support Files/Pods-FirstMac/Pods-FirstMac.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,17 +36,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				702D6D1330F5A1AC1AC5AC76 /* Pods_FirstMac.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E52C557005F9EB46ED45080 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1749C6E1E51B7FF0B714E3DE /* Pods_FirstMac.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		493DA75C5C5AE9999E2BC176 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				90CF2446E2781165DF7B6DDB /* Pods-FirstMac.debug.xcconfig */,
+				EE7DA647D7D1D83FB035B3A1 /* Pods-FirstMac.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7817583023F3D118006117D4 = {
 			isa = PBXGroup;
 			children = (
 				7817583B23F3D118006117D4 /* FirstMac */,
 				7817583A23F3D118006117D4 /* Products */,
+				493DA75C5C5AE9999E2BC176 /* Pods */,
+				0E52C557005F9EB46ED45080 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7817584D23F3D11D006117D4 /* Build configuration list for PBXNativeTarget "FirstMac" */;
 			buildPhases = (
+				86A44C58ACDB02590A346C73 /* [CP] Check Pods Manifest.lock */,
 				7817583523F3D118006117D4 /* Sources */,
 				7817583623F3D118006117D4 /* Frameworks */,
 				7817583723F3D118006117D4 /* Resources */,
+				82164BE32287A65372201F5C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +160,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		82164BE32287A65372201F5C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FirstMac/Pods-FirstMac-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FirstMac/Pods-FirstMac-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FirstMac/Pods-FirstMac-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86A44C58ACDB02590A346C73 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FirstMac-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7817583523F3D118006117D4 /* Sources */ = {
@@ -270,6 +339,7 @@
 		};
 		7817584E23F3D11D006117D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90CF2446E2781165DF7B6DDB /* Pods-FirstMac.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FirstMac/FirstMac.entitlements;
@@ -290,6 +360,7 @@
 		};
 		7817584F23F3D11D006117D4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE7DA647D7D1D83FB035B3A1 /* Pods-FirstMac.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FirstMac/FirstMac.entitlements;
