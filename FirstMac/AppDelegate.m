@@ -7,15 +7,22 @@
 //
 
 #import "AppDelegate.h"
+#import "LoginWindowController.h"
 
 @interface AppDelegate ()
+
+@property(nonatomic, strong)LoginWindowController *mainWindowController;
 
 @end
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
+    
+    NSRect frame = CGRectMake(0, 0, 400, 300);
+    self.mainWindowController = [[LoginWindowController alloc] initWithFrame:frame withTitle:@"登录"];
+//    [self.mainWindowController.window makeKeyAndOrderFront:self];
+    [self.mainWindowController showWindow:self];
 }
 
 

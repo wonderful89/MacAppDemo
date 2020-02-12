@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		7817584323F3D11D006117D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7817584223F3D11D006117D4 /* Assets.xcassets */; };
 		7817584623F3D11D006117D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7817584423F3D11D006117D4 /* Main.storyboard */; };
 		7817584923F3D11D006117D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817584823F3D11D006117D4 /* main.m */; };
+		7817585323F42A78006117D4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817585223F42A78006117D4 /* LoginViewController.m */; };
+		7817585623F42A93006117D4 /* LoginWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817585523F42A93006117D4 /* LoginWindowController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,10 @@
 		7817584723F3D11D006117D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7817584823F3D11D006117D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7817584A23F3D11D006117D4 /* FirstMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FirstMac.entitlements; sourceTree = "<group>"; };
+		7817585123F42A77006117D4 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		7817585223F42A78006117D4 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		7817585423F42A93006117D4 /* LoginWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginWindowController.h; sourceTree = "<group>"; };
+		7817585523F42A93006117D4 /* LoginWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginWindowController.m; sourceTree = "<group>"; };
 		90CF2446E2781165DF7B6DDB /* Pods-FirstMac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstMac.debug.xcconfig"; path = "Target Support Files/Pods-FirstMac/Pods-FirstMac.debug.xcconfig"; sourceTree = "<group>"; };
 		EE7DA647D7D1D83FB035B3A1 /* Pods-FirstMac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstMac.release.xcconfig"; path = "Target Support Files/Pods-FirstMac/Pods-FirstMac.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,13 +63,13 @@
 				90CF2446E2781165DF7B6DDB /* Pods-FirstMac.debug.xcconfig */,
 				EE7DA647D7D1D83FB035B3A1 /* Pods-FirstMac.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		7817583023F3D118006117D4 = {
 			isa = PBXGroup;
 			children = (
+				7817585023F429CF006117D4 /* Login */,
 				7817583B23F3D118006117D4 /* FirstMac */,
 				7817583A23F3D118006117D4 /* Products */,
 				493DA75C5C5AE9999E2BC176 /* Pods */,
@@ -93,6 +99,17 @@
 				7817584A23F3D11D006117D4 /* FirstMac.entitlements */,
 			);
 			path = FirstMac;
+			sourceTree = "<group>";
+		};
+		7817585023F429CF006117D4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				7817585123F42A77006117D4 /* LoginViewController.h */,
+				7817585223F42A78006117D4 /* LoginViewController.m */,
+				7817585423F42A93006117D4 /* LoginWindowController.h */,
+				7817585523F42A93006117D4 /* LoginWindowController.m */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,7 +225,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7817585323F42A78006117D4 /* LoginViewController.m in Sources */,
 				7817584123F3D118006117D4 /* ViewController.m in Sources */,
+				7817585623F42A93006117D4 /* LoginWindowController.m in Sources */,
 				7817584923F3D11D006117D4 /* main.m in Sources */,
 				7817583E23F3D118006117D4 /* AppDelegate.m in Sources */,
 			);
