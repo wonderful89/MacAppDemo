@@ -1,0 +1,17 @@
+//
+//  PrefixHeader.pch
+//  FirstMac
+//
+//  Created by qianzhao on 2020/2/20.
+//  Copyright © 2020 qianzhao. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "BaseWindowController.h"
+#import "BaseTableCellView.h"
+
+#import "Masonry.h"
+
+#endif /* PrefixHeader_pch */

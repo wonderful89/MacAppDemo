@@ -7,11 +7,12 @@
 //
 
 #import "AppDelegate.h"
-#import "LoginWindowController.h"
+#import "LoginViewController.h"
+#import "MainViewController.h"
 
 @interface AppDelegate ()
 
-@property(nonatomic, strong)LoginWindowController *mainWindowController;
+@property(nonatomic, strong)NSWindowController *mainWindowController;
 
 @end
 
@@ -19,9 +20,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     
-    NSRect frame = CGRectMake(0, 0, 400, 300);
-    self.mainWindowController = [[LoginWindowController alloc] initWithFrame:frame withTitle:@"登录"];
-//    [self.mainWindowController.window makeKeyAndOrderFront:self];
+    self.mainWindowController = [[BaseWindowController alloc] initWithTitle:@"登录页面" withController:[MainViewController new]];
     [self.mainWindowController showWindow:self];
 }
 

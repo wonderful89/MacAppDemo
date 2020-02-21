@@ -14,7 +14,9 @@
 		7817584623F3D11D006117D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7817584423F3D11D006117D4 /* Main.storyboard */; };
 		7817584923F3D11D006117D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817584823F3D11D006117D4 /* main.m */; };
 		7817585323F42A78006117D4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817585223F42A78006117D4 /* LoginViewController.m */; };
-		7817585623F42A93006117D4 /* LoginWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817585523F42A93006117D4 /* LoginWindowController.m */; };
+		7829A4B723FE99E400945F9B /* BaseWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7829A4B623FE99E400945F9B /* BaseWindowController.m */; };
+		7829A4BB23FEA18400945F9B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7829A4BA23FEA18400945F9B /* MainViewController.m */; };
+		7829A4BE23FF6BC900945F9B /* BaseTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7829A4BD23FF6BC900945F9B /* BaseTableCellView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,8 +33,13 @@
 		7817584A23F3D11D006117D4 /* FirstMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FirstMac.entitlements; sourceTree = "<group>"; };
 		7817585123F42A77006117D4 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		7817585223F42A78006117D4 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		7817585423F42A93006117D4 /* LoginWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginWindowController.h; sourceTree = "<group>"; };
-		7817585523F42A93006117D4 /* LoginWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginWindowController.m; sourceTree = "<group>"; };
+		7829A4B523FE99E400945F9B /* BaseWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseWindowController.h; sourceTree = "<group>"; };
+		7829A4B623FE99E400945F9B /* BaseWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseWindowController.m; sourceTree = "<group>"; };
+		7829A4B823FE9E3700945F9B /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		7829A4B923FEA18400945F9B /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		7829A4BA23FEA18400945F9B /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		7829A4BC23FF6BC900945F9B /* BaseTableCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableCellView.h; sourceTree = "<group>"; };
+		7829A4BD23FF6BC900945F9B /* BaseTableCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableCellView.m; sourceTree = "<group>"; };
 		90CF2446E2781165DF7B6DDB /* Pods-FirstMac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstMac.debug.xcconfig"; path = "Target Support Files/Pods-FirstMac/Pods-FirstMac.debug.xcconfig"; sourceTree = "<group>"; };
 		EE7DA647D7D1D83FB035B3A1 /* Pods-FirstMac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstMac.release.xcconfig"; path = "Target Support Files/Pods-FirstMac/Pods-FirstMac.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +76,9 @@
 		7817583023F3D118006117D4 = {
 			isa = PBXGroup;
 			children = (
+				7829A4B223FE998B00945F9B /* Common */,
+				7829A4B123FE998500945F9B /* Components */,
+				7829A4B023FE997F00945F9B /* Functions */,
 				7817585023F429CF006117D4 /* Login */,
 				7817583B23F3D118006117D4 /* FirstMac */,
 				7817583A23F3D118006117D4 /* Products */,
@@ -92,6 +102,7 @@
 				7817583D23F3D118006117D4 /* AppDelegate.m */,
 				7817583F23F3D118006117D4 /* ViewController.h */,
 				7817584023F3D118006117D4 /* ViewController.m */,
+				7829A4B823FE9E3700945F9B /* PrefixHeader.pch */,
 				7817584223F3D11D006117D4 /* Assets.xcassets */,
 				7817584423F3D11D006117D4 /* Main.storyboard */,
 				7817584723F3D11D006117D4 /* Info.plist */,
@@ -106,10 +117,51 @@
 			children = (
 				7817585123F42A77006117D4 /* LoginViewController.h */,
 				7817585223F42A78006117D4 /* LoginViewController.m */,
-				7817585423F42A93006117D4 /* LoginWindowController.h */,
-				7817585523F42A93006117D4 /* LoginWindowController.m */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		7829A4B023FE997F00945F9B /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				7829A4B323FE999800945F9B /* Main */,
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
+		7829A4B123FE998500945F9B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		7829A4B223FE998B00945F9B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7829A4B423FE99BA00945F9B /* UI */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		7829A4B323FE999800945F9B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7829A4B923FEA18400945F9B /* MainViewController.h */,
+				7829A4BA23FEA18400945F9B /* MainViewController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		7829A4B423FE99BA00945F9B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7829A4B523FE99E400945F9B /* BaseWindowController.h */,
+				7829A4B623FE99E400945F9B /* BaseWindowController.m */,
+				7829A4BC23FF6BC900945F9B /* BaseTableCellView.h */,
+				7829A4BD23FF6BC900945F9B /* BaseTableCellView.m */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,9 +278,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7817585323F42A78006117D4 /* LoginViewController.m in Sources */,
+				7829A4BB23FEA18400945F9B /* MainViewController.m in Sources */,
 				7817584123F3D118006117D4 /* ViewController.m in Sources */,
-				7817585623F42A93006117D4 /* LoginWindowController.m in Sources */,
+				7829A4B723FE99E400945F9B /* BaseWindowController.m in Sources */,
 				7817584923F3D11D006117D4 /* main.m in Sources */,
+				7829A4BE23FF6BC900945F9B /* BaseTableCellView.m in Sources */,
 				7817583E23F3D118006117D4 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,10 +416,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FirstMac/FirstMac.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = ZVDDR6XGW9;
 				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/FirstMac/PrefixHeader.pch";
 				INFOPLIST_FILE = FirstMac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -374,6 +430,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.qianzhao.test.FirstMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -383,10 +440,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FirstMac/FirstMac.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = ZVDDR6XGW9;
 				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/FirstMac/PrefixHeader.pch";
 				INFOPLIST_FILE = FirstMac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -395,6 +454,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.qianzhao.test.FirstMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

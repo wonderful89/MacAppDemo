@@ -16,11 +16,15 @@
 
 - (void)loadView{
     NSLog(@"loadView");
-    self.view = [[NSView alloc] initWithFrame:CGRectMake(0,0,200,200)];
+    self.view = [[NSView alloc] initWithFrame:CGRectMake(0,0,400,400)];
     self.view.wantsLayer = YES;
     self.view.layer.backgroundColor = [NSColor whiteColor].CGColor;
 }
 
+- (void)viewWillAppear {
+    NSLog(@"window3 = %@", self.view.window);
+    self.view.window.titleVisibility = NSWindowTitleHidden;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
