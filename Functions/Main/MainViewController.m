@@ -7,10 +7,16 @@
 //
 
 #import "MainViewController.h"
+#import "WindowViewController.h"
+#import "ButtonViewController.h"
+#import "CommonBrowserViewController.h"
 
-static NSString* row1 = @"111";
-static NSString* row2 = @"222";
-static NSString* row3 = @"333";
+static NSString* row1 = @"模态窗口";
+static NSString* row2 = @"消失本窗口，弹出新窗口";
+static NSString* row3 = @"消失本窗口，弹出新窗口(Window改造)";
+static NSString* row4 = @"button样式显示";
+static NSString* row5 = @"commonBrowser";
+static NSString* rowLast = @"Last";
 
 @interface MainViewController ()<NSTableViewDelegate, NSTableViewDataSource>
 
@@ -18,17 +24,12 @@ static NSString* row3 = @"333";
 @property(nonatomic, strong)NSTableView *tableView;
 @property(nonatomic, strong)NSArray *items;
 
+@property(nonatomic, strong)NSWindowController *modelWindowController;
+
 @end
 
 #pragma mark - MainViewController
 @implementation MainViewController
-
-- (void)loadView{
-    NSLog(@"loadView");
-    self.view = [[NSView alloc] initWithFrame:CGRectMake(0,0,400,400)];
-    self.view.wantsLayer = YES;
-    self.view.layer.backgroundColor = [NSColor whiteColor].CGColor;
-}
 
 - (void)viewWillAppear {
     NSLog(@"window3 = %@", self.view.window);
@@ -37,7 +38,13 @@ static NSString* row3 = @"333";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.items = @[row1, row2, row3];
+    self.items = @[row1,
+                   row2,
+                   row3,
+                   row4,
+                   row5,
+                   rowLast
+    ];
     [self.view addSubview:self.scrollView];
     self.scrollView.documentView = self.tableView;
     
@@ -86,14 +93,28 @@ static NSString* row3 = @"333";
     if (tableView.selectedRow < 0 || tableView.selectedRow > self.items.count - 1){
         return;
     }
+    
     NSString *testContent = self.items[tableView.selectedRow];
     if ([testContent isEqualToString:row1]){
-        
+        self.modelWindowController = [[BaseWindowController alloc] initWithTitle:@"window" withController:[WindowViewController new]];
+        [[NSApplication sharedApplication] runModalForWindow:self.modelWindowController.window];
     } else if ([testContent isEqualToString:row2]){
-        
+        BaseWindowController *windowController = [[BaseWindowController alloc] initWithTitle:@"window" withController:[WindowViewController new]];
+        [windowController showWindow:nil];
     } else if ([testContent isEqualToString:row3]){
-        
+        // 这样处理为何不响应事件
+        DebugWindowViewController *windowController = [[DebugWindowViewController alloc] initWithTitle:@"window"];
+        [windowController showWindow:nil];
+        //        [windowController.window makeKeyAndOrderFront:nil];
+    } else if ([testContent isEqualToString:row4]){
+        BaseWindowController *windowController = [[BaseWindowController alloc] initWithTitle:@"buttons" withController:[ButtonViewController new]];
+        [windowController showWindow:nil];
+    } else if ([testContent isEqualToString:row5]){
+        BaseWindowController *windowController = [[BaseWindowController alloc] initWithTitle:@"browser" withController:[CommonBrowserViewController new]];
+        [windowController showWindow:nil];
     }
+    
+    [self.tableView deselectRow:tableView.selectedRow];
 }
 
 - (nullable NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row {

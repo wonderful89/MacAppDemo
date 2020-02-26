@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
+        <capability name="System colors introduced in macOS 10.13" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ButtonViewController">
+            <connections>
+                <outlet property="button1" destination="SEi-au-VQl" id="HHF-M9-8mN"/>
+                <outlet property="button2" destination="wwM-so-GHC" id="Mrc-ps-CUc"/>
+                <outlet property="checkBox1" destination="Hyh-Tz-Qo0" id="hG0-CW-jP5"/>
+                <outlet property="label" destination="Ava-F4-FQH" id="WYB-Zq-fvK"/>
+                <outlet property="popUpButton" destination="gWm-VM-Wra" id="nwt-JD-kSd"/>
+                <outlet property="radio1" destination="89I-Sy-cTi" id="vMW-LW-NcA"/>
+                <outlet property="upload1" destination="LF0-a2-61N" id="BXT-71-F4Q"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView wantsLayer="YES" id="Hz6-mo-xeY" colorLabel="IBBuiltInLabel-Orange">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wwM-so-GHC">
+                    <rect key="frame" x="34" y="316" width="81" height="23"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="roundTextured" title=" textbutton" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ify-eW-QWa">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="textbuttonClick:" target="-2" id="hZ2-fm-AWb"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SEi-au-VQl">
+                    <rect key="frame" x="28" y="352" width="111" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="pushButton" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VGI-Ge-nxL">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="pushButtonClick:" target="-2" id="sDU-Zc-spB"/>
+                    </connections>
+                </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ava-F4-FQH">
+                    <rect key="frame" x="33" y="275" width="43" height="16"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="0" id="gV5-ME-JKd">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fkg-mg-K5q">
+                    <rect key="frame" x="33" y="232" width="25" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="d2q-Ub-YED">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
+                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gWm-VM-Wra">
+                    <rect key="frame" x="33" y="186" width="85" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="LGq-Uo-Mcr" id="Uob-5u-bc6">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                        <menu key="menu" id="i68-aP-GgA">
+                            <items>
+                                <menuItem title="Item 1" state="on" id="LGq-Uo-Mcr"/>
+                                <menuItem title="Item 2" id="rrL-Fx-7ca"/>
+                                <menuItem title="Item 3" id="Geq-fI-Q0C"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                    <connections>
+                        <action selector="popUpButtonClick:" target="-2" id="YwV-Ca-Kte"/>
+                    </connections>
+                </popUpButton>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uRK-dg-Arh">
+                    <rect key="frame" x="36" y="153" width="61" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="Check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="cCB-a7-KKe">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="checkBoxClick:" target="-2" id="3Re-fH-Pol"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hyh-Tz-Qo0">
+                    <rect key="frame" x="37" y="119" width="57" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="radio" title="Radio" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="BpY-YZ-aKI">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="radioClick:" target="-2" id="ZFr-48-nb2"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="89I-Sy-cTi">
+                    <rect key="frame" x="26" y="76" width="80" height="19"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="roundRect" title="Round Rect" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LHu-6S-nbi">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="controlContent"/>
+                    </buttonCell>
+                </button>
+                <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LF0-a2-61N">
+                    <rect key="frame" x="38" y="34" width="27" height="26"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="disclosure" bezelStyle="roundedDisclosure" imagePosition="only" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6Ge-HY-df3">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="upArrowClick:" target="-2" id="X60-ZB-CVk"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rzq-mC-b5T">
+                    <rect key="frame" x="102" y="274" width="13" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="leu-rm-Xwn">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="increaseClick:" target="-2" id="Kx7-4O-hA0"/>
+                    </connections>
+                </button>
+            </subviews>
+            <animations>
+                <caTransition key="subviews">
+                    <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8QD05T
+S2V5ZWRBcmNoaXZlctEICVRyb290gAGrCwwXGBkaDhAPISdVJG51bGzVDQ4PEBESExQVFlYkY2xhc3Nb
+ZW5kUHJvZ3Jlc3NUdHlwZVdzdWJ0eXBlXxASX19DQUNvZGluZ0NvbnRlbnRzgAqAAoAEgAOABSI/gAAA
+WGZyb21MZWZ0VHB1c2jSGw0cIFpOUy5vYmplY3Rzox0eH4AGgAeACIAJ0iIjJCVaJGNsYXNzbmFtZVgk
+Y2xhc3Nlc1dOU0FycmF5oiQmWE5TT2JqZWN00iIjKClcQ0FUcmFuc2l0aW9uoyorJlxDQVRyYW5zaXRp
+b25bQ0FBbmltYXRpb24ACAARABoAJAApADIANwBJAEwAUQBTAF8AZQBwAHcAgwCIAJAApQCnAKkAqwCt
+AK8AtAC9AMIAxwDSANYA2ADaANwA3gDjAO4A9wD/AQIBCwEQAR0BIQEuAAAAAAAAAgEAAAAAAAAALAAA
+AAAAAAAAAAAAAAAAATo
+</mutableData>
+                </caTransition>
+            </animations>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="wantsLayer" value="YES"/>
+                <userDefinedRuntimeAttribute type="color" keyPath="layer.backgroundColor">
+                    <color key="value" name="findHighlightColor" catalog="System" colorSpace="catalog"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="139" y="154"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="NSAddTemplate" width="11" height="11"/>
+    </resources>
+</document>

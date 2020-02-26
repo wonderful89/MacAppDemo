@@ -17,6 +17,14 @@
 		7829A4B723FE99E400945F9B /* BaseWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7829A4B623FE99E400945F9B /* BaseWindowController.m */; };
 		7829A4BB23FEA18400945F9B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7829A4BA23FEA18400945F9B /* MainViewController.m */; };
 		7829A4BE23FF6BC900945F9B /* BaseTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7829A4BD23FF6BC900945F9B /* BaseTableCellView.m */; };
+		7829A4C223FFB21700945F9B /* WindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7829A4C123FFB21600945F9B /* WindowViewController.m */; };
+		7833B12F2403F19200943396 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7833B12E2403F19200943396 /* BaseViewController.m */; };
+		7833B1392405314F00943396 /* ButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7833B1372405314F00943396 /* ButtonViewController.m */; };
+		7833B13A2405314F00943396 /* ButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7833B1382405314F00943396 /* ButtonViewController.xib */; };
+		7833B13F2406101E00943396 /* CommonBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7833B13D2406101E00943396 /* CommonBrowserViewController.m */; };
+		7833B1402406101E00943396 /* CommonBrowserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7833B13E2406101E00943396 /* CommonBrowserViewController.xib */; };
+		7833B1432406147200943396 /* CommonAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 7833B1422406147200943396 /* CommonAlert.m */; };
+		7833B14724061A0E00943396 /* DDLogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7833B14524061A0E00943396 /* DDLogManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +48,20 @@
 		7829A4BA23FEA18400945F9B /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		7829A4BC23FF6BC900945F9B /* BaseTableCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableCellView.h; sourceTree = "<group>"; };
 		7829A4BD23FF6BC900945F9B /* BaseTableCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableCellView.m; sourceTree = "<group>"; };
+		7829A4C023FFB21600945F9B /* WindowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WindowViewController.h; sourceTree = "<group>"; };
+		7829A4C123FFB21600945F9B /* WindowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WindowViewController.m; sourceTree = "<group>"; };
+		7833B12D2403F19200943396 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		7833B12E2403F19200943396 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		7833B1362405314F00943396 /* ButtonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonViewController.h; sourceTree = "<group>"; };
+		7833B1372405314F00943396 /* ButtonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ButtonViewController.m; sourceTree = "<group>"; };
+		7833B1382405314F00943396 /* ButtonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonViewController.xib; sourceTree = "<group>"; };
+		7833B13C2406101E00943396 /* CommonBrowserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonBrowserViewController.h; sourceTree = "<group>"; };
+		7833B13D2406101E00943396 /* CommonBrowserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonBrowserViewController.m; sourceTree = "<group>"; };
+		7833B13E2406101E00943396 /* CommonBrowserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonBrowserViewController.xib; sourceTree = "<group>"; };
+		7833B1412406147200943396 /* CommonAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonAlert.h; sourceTree = "<group>"; };
+		7833B1422406147200943396 /* CommonAlert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonAlert.m; sourceTree = "<group>"; };
+		7833B14524061A0E00943396 /* DDLogManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLogManager.m; sourceTree = "<group>"; };
+		7833B14624061A0E00943396 /* DDLogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLogManager.h; sourceTree = "<group>"; };
 		90CF2446E2781165DF7B6DDB /* Pods-FirstMac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstMac.debug.xcconfig"; path = "Target Support Files/Pods-FirstMac/Pods-FirstMac.debug.xcconfig"; sourceTree = "<group>"; };
 		EE7DA647D7D1D83FB035B3A1 /* Pods-FirstMac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstMac.release.xcconfig"; path = "Target Support Files/Pods-FirstMac/Pods-FirstMac.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,6 +146,9 @@
 		7829A4B023FE997F00945F9B /* Functions */ = {
 			isa = PBXGroup;
 			children = (
+				7833B13B24060FFF00943396 /* Browser */,
+				7833B1352405312C00943396 /* UI */,
+				7829A4BF23FFB1F800945F9B /* Window */,
 				7829A4B323FE999800945F9B /* Main */,
 			);
 			path = Functions;
@@ -139,6 +164,7 @@
 		7829A4B223FE998B00945F9B /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				7833B14424061A0E00943396 /* DDLog */,
 				7829A4B423FE99BA00945F9B /* UI */,
 			);
 			path = Common;
@@ -158,10 +184,52 @@
 			children = (
 				7829A4B523FE99E400945F9B /* BaseWindowController.h */,
 				7829A4B623FE99E400945F9B /* BaseWindowController.m */,
+				7833B12D2403F19200943396 /* BaseViewController.h */,
+				7833B12E2403F19200943396 /* BaseViewController.m */,
 				7829A4BC23FF6BC900945F9B /* BaseTableCellView.h */,
 				7829A4BD23FF6BC900945F9B /* BaseTableCellView.m */,
+				7833B1412406147200943396 /* CommonAlert.h */,
+				7833B1422406147200943396 /* CommonAlert.m */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		7829A4BF23FFB1F800945F9B /* Window */ = {
+			isa = PBXGroup;
+			children = (
+				7829A4C023FFB21600945F9B /* WindowViewController.h */,
+				7829A4C123FFB21600945F9B /* WindowViewController.m */,
+			);
+			path = Window;
+			sourceTree = "<group>";
+		};
+		7833B1352405312C00943396 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7833B1362405314F00943396 /* ButtonViewController.h */,
+				7833B1372405314F00943396 /* ButtonViewController.m */,
+				7833B1382405314F00943396 /* ButtonViewController.xib */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		7833B13B24060FFF00943396 /* Browser */ = {
+			isa = PBXGroup;
+			children = (
+				7833B13C2406101E00943396 /* CommonBrowserViewController.h */,
+				7833B13D2406101E00943396 /* CommonBrowserViewController.m */,
+				7833B13E2406101E00943396 /* CommonBrowserViewController.xib */,
+			);
+			path = Browser;
+			sourceTree = "<group>";
+		};
+		7833B14424061A0E00943396 /* DDLog */ = {
+			isa = PBXGroup;
+			children = (
+				7833B14524061A0E00943396 /* DDLogManager.m */,
+				7833B14624061A0E00943396 /* DDLogManager.h */,
+			);
+			path = DDLog;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +291,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7833B1402406101E00943396 /* CommonBrowserViewController.xib in Resources */,
+				7833B13A2405314F00943396 /* ButtonViewController.xib in Resources */,
 				7817584323F3D11D006117D4 /* Assets.xcassets in Resources */,
 				7817584623F3D11D006117D4 /* Main.storyboard in Resources */,
 			);
@@ -277,12 +347,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7829A4C223FFB21700945F9B /* WindowViewController.m in Sources */,
+				7833B1432406147200943396 /* CommonAlert.m in Sources */,
+				7833B12F2403F19200943396 /* BaseViewController.m in Sources */,
 				7817585323F42A78006117D4 /* LoginViewController.m in Sources */,
 				7829A4BB23FEA18400945F9B /* MainViewController.m in Sources */,
 				7817584123F3D118006117D4 /* ViewController.m in Sources */,
+				7833B14724061A0E00943396 /* DDLogManager.m in Sources */,
+				7833B13F2406101E00943396 /* CommonBrowserViewController.m in Sources */,
 				7829A4B723FE99E400945F9B /* BaseWindowController.m in Sources */,
 				7817584923F3D11D006117D4 /* main.m in Sources */,
 				7829A4BE23FF6BC900945F9B /* BaseTableCellView.m in Sources */,
+				7833B1392405314F00943396 /* ButtonViewController.m in Sources */,
 				7817583E23F3D118006117D4 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,7 +503,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.qianzhao.test.FirstMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -451,7 +527,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.qianzhao.test.FirstMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

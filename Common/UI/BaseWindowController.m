@@ -8,7 +8,7 @@
 
 #import "BaseWindowController.h"
 
-@interface BaseWindowController ()
+@interface BaseWindowController ()<NSWindowDelegate>
 
 @end
 

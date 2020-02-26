@@ -9,9 +9,12 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
+#import <CocoaLumberjack/CocoaLumberjack.h>
+#import "Masonry.h"
+
 #import "BaseWindowController.h"
 #import "BaseTableCellView.h"
 
-#import "Masonry.h"
+static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
 
 #endif /* PrefixHeader_pch */
