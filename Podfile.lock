@@ -12,14 +12,14 @@ PODS:
   - AFNetworking/Reachability (3.2.1)
   - AFNetworking/Security (3.2.1)
   - AFNetworking/Serialization (3.2.1)
-  - CocoaLumberjack (3.6.1):
-    - CocoaLumberjack/Core (= 3.6.1)
   - CocoaLumberjack/Core (3.6.1)
+  - CocoaLumberjack/Swift (3.6.1):
+    - CocoaLumberjack/Core
   - Masonry (1.1.0)
 
 DEPENDENCIES:
   - AFNetworking
-  - CocoaLumberjack
+  - CocoaLumberjack/Swift
   - Masonry
 
 SPEC REPOS:
@@ -33,6 +33,6 @@ SPEC CHECKSUMS:
   CocoaLumberjack: b17ae15142558d08bbacf69775fa10c4abbebcc9
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
-PODFILE CHECKSUM: e38e87a9c3a91bd76ba642bd51eb9a728cbbadd2
+PODFILE CHECKSUM: 0483994f6d10c4d55c7b80321d0392b8c5007bf6
 
 COCOAPODS: 1.8.4

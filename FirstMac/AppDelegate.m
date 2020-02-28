@@ -26,6 +26,7 @@
     self.mainWindowController = [[BaseWindowController alloc] initWithTitle:@"登录页面" withController:[MainViewController new]];
 //    self.mainWindowController = [[DebugWindowViewController alloc] initWithTitle:@"测试页面"];
     [self.mainWindowController showWindow:self];
+    
 }
 
 

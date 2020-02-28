@@ -32,7 +32,7 @@
 - (NSButton *)button{
     if(!_button){
         if (@available(macOS 10.12, *)) {
-            _button = [NSButton buttonWithTitle:@"测试" target:self action:@selector(buttonClick:)];
+            _button = [NSButton buttonWithTitle:@"点击关闭窗口" target:self action:@selector(buttonClick:)];
         } else {
             // Fallback on earlier versions
         }
@@ -47,7 +47,9 @@
     NSLog(@"self.window.isModalPanel = %d", self.view.window.isModalPanel);
     if (self.view.window.modalPanel){
         if ([NSApp modalWindow] == self.view.window){
+            [self.view.window close];
             [NSApp stopModal];
+//            [NSApp stopModalWithCode:errAuthorizationCanceled];
         }
     } else {
         [self.view.window close];

@@ -11,13 +11,16 @@
 #import "ButtonViewController.h"
 #import "CommonBrowserViewController.h"
 #import "MultiTabBrowserViewController.h"
+#import "FirstMac-Swift.h"
 
 static NSString* row1 = @"模态窗口";
+static NSString* row1_2 = @"模态窗口2";
 static NSString* row2 = @"消失本窗口，弹出新窗口";
 static NSString* row3 = @"消失本窗口，弹出新窗口(Window改造)";
 static NSString* row4 = @"button样式显示";
 static NSString* row5 = @"单TabBrowser";
 static NSString* row6 = @"多TabBrowser";
+static NSString* row7 = @"打开另一个应用测试";
 static NSString* rowLast = @"Last";
 
 @interface MainViewController ()<NSTableViewDelegate, NSTableViewDataSource>
@@ -41,11 +44,13 @@ static NSString* rowLast = @"Last";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.items = @[row1,
+                   row1_2,
                    row2,
                    row3,
                    row4,
                    row5,
                    row6,
+                   row7,
                    rowLast
     ];
     [self.view addSubview:self.scrollView];
@@ -100,7 +105,19 @@ static NSString* rowLast = @"Last";
     NSString *testContent = self.items[tableView.selectedRow];
     if ([testContent isEqualToString:row1]){
         self.modelWindowController = [[BaseWindowController alloc] initWithTitle:@"window" withController:[WindowViewController new]];
-        [[NSApplication sharedApplication] runModalForWindow:self.modelWindowController.window];
+        NSWindow *theModalWindow = self.modelWindowController.window;
+//        [[NSApplication sharedApplication] runModalForWindow:theModalWindow];
+        
+        [theModalWindow makeKeyWindow];
+        NSInteger retVal = [NSApp runModalForWindow:theModalWindow];
+        NSLog(@"retValue = %ld", retVal);
+//        [theModalWindow close];
+//        //continue and do somethin according the value in retVal
+        [[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
+        
+    } else if ([testContent isEqualToString:row1_2]){
+        // 直接close就可以
+        [self presentViewControllerAsModalWindow:[WindowViewController new]];
     } else if ([testContent isEqualToString:row2]){
         BaseWindowController *windowController = [[BaseWindowController alloc] initWithTitle:@"window" withController:[WindowViewController new]];
         [windowController showWindow:nil];
@@ -118,6 +135,9 @@ static NSString* rowLast = @"Last";
     } else if ([testContent isEqualToString:row6]){
         BaseWindowController *windowController = [[BaseWindowController alloc] initWithTitle:@"browser" withController:[MultiTabBrowserViewController new]];
         [windowController showWindow:nil];
+    } else if ([testContent isEqualToString:row7]){
+        OpenAnotherAppViewController *vc = [OpenAnotherAppViewController new];
+        [self presentViewControllerAsModalWindow:vc];
     }
     
     [self.tableView deselectRow:tableView.selectedRow];
