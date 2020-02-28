@@ -10,12 +10,14 @@
 #import "WindowViewController.h"
 #import "ButtonViewController.h"
 #import "CommonBrowserViewController.h"
+#import "MultiTabBrowserViewController.h"
 
 static NSString* row1 = @"模态窗口";
 static NSString* row2 = @"消失本窗口，弹出新窗口";
 static NSString* row3 = @"消失本窗口，弹出新窗口(Window改造)";
 static NSString* row4 = @"button样式显示";
-static NSString* row5 = @"commonBrowser";
+static NSString* row5 = @"单TabBrowser";
+static NSString* row6 = @"多TabBrowser";
 static NSString* rowLast = @"Last";
 
 @interface MainViewController ()<NSTableViewDelegate, NSTableViewDataSource>
@@ -43,6 +45,7 @@ static NSString* rowLast = @"Last";
                    row3,
                    row4,
                    row5,
+                   row6,
                    rowLast
     ];
     [self.view addSubview:self.scrollView];
@@ -111,6 +114,9 @@ static NSString* rowLast = @"Last";
         [windowController showWindow:nil];
     } else if ([testContent isEqualToString:row5]){
         BaseWindowController *windowController = [[BaseWindowController alloc] initWithTitle:@"browser" withController:[CommonBrowserViewController new]];
+        [windowController showWindow:nil];
+    } else if ([testContent isEqualToString:row6]){
+        BaseWindowController *windowController = [[BaseWindowController alloc] initWithTitle:@"browser" withController:[MultiTabBrowserViewController new]];
         [windowController showWindow:nil];
     }
     

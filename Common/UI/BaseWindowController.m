@@ -18,7 +18,7 @@
 {
     self = [super init];
     if (self) {
-        NSUInteger style = NSTitledWindowMask | NSClosableWindowMask |NSMiniaturizableWindowMask | NSResizableWindowMask;
+        NSUInteger style = NSWindowStyleMaskTitled | NSWindowStyleMaskClosable |NSWindowStyleMaskMiniaturizable | NSWindowStyleMaskResizable;
         NSWindow *window = [[NSWindow alloc]initWithContentRect:CGRectMake(0, 0, 100, 100) styleMask:style backing:NSBackingStoreBuffered defer:YES];
         window.title = title;
         self.window = window;

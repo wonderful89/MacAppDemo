@@ -10,7 +10,7 @@
 #import "CommonAlert.h"
 @import WebKit;
 
-@interface CommonBrowserViewController ()<WebUIDelegate, WKNavigationDelegate, NSWindowDelegate>
+@interface CommonBrowserViewController ()<WebUIDelegate, WKNavigationDelegate, WebFrameLoadDelegate,NSWindowDelegate>
 
 @property (strong) NSString *initialUrl;
 @property (weak) IBOutlet NSTextField *textField;
@@ -38,13 +38,13 @@
     self.webView.UIDelegate = (id)self;
     self.webView.navigationDelegate = (id)self;
     
-//    [self.webView setValue:@(YES) forKey:@"drawsTransparentBackground"];
+    //    [self.webView setValue:@(YES) forKey:@"drawsTransparentBackground"];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
     });
-//    self.webView.wantsLayer = YES;
-//    self.webView.layer.backgroundColor = [[NSColor clearColor] CGColor];
+    //    self.webView.wantsLayer = YES;
+    //    self.webView.layer.backgroundColor = [[NSColor clearColor] CGColor];
     
     [NSEvent addLocalMonitorForEventsMatchingMask:NSEventMaskKeyDown handler:^NSEvent * _Nullable(NSEvent * _Nonnull event) {
         [self keyDown:event];
@@ -57,10 +57,38 @@
         [self homeClick:nil];
     }
     
+    [self.webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:NULL];
+    [self.webView addObserver:self forKeyPath:@"title" options:NSKeyValueObservingOptionNew context:NULL];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"estimatedProgress"]){
+        if (object == self.webView){
+            DDLogVerbose(@"program= %.2f",self.webView.estimatedProgress);
+        } else {
+            [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+        }
+    } else if ([keyPath isEqualToString:@"title"]){
+        if (object == self.webView){
+            if (self.multiTab){
+                if (self.delegate && [self.delegate respondsToSelector:@selector(updateTitle:withController:)]){
+                    [self.delegate updateTitle:self.webView.title withController:self];
+                }
+            }
+        } else {
+            [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+        }
+    } else {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
+}
+
+- (void)dealloc{
+    [self.webView removeObserver:self forKeyPath:@"estimatedProgress"];
 }
 
 - (void)viewWillAppear{
-//    self.view.window.delegate = self;
+    //    self.view.window.delegate = self;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self refreshButtons];
         self.webView.wantsLayer = YES;
@@ -120,10 +148,10 @@
 #pragma mark - key event
 
 - (void)keyDown:(NSEvent *)event{
-//    DDLogInfo(@"event:%d", event.keyCode);
+    //    DDLogInfo(@"event:%d", event.keyCode);
     NSString *eventChars = [event charactersIgnoringModifiers];
     unichar keyChar = [eventChars characterAtIndex:0];
-
+    
     if (( keyChar == NSEnterCharacter ) ||
         ( keyChar == NSCarriageReturnCharacter )){
         [self go:nil];
@@ -140,8 +168,16 @@
     WKNavigationActionPolicy policy = WKNavigationActionPolicyAllow;
     if (navitationType == WKNavigationTypeLinkActivated){
         policy = WKNavigationActionPolicyCancel;
-        BaseWindowController *windowController = [[BaseWindowController alloc] initWithTitle:@"页面" withController:[[CommonBrowserViewController alloc] initWithUrl:url]];
-        [windowController showWindow:nil];
+        if (self.multiTab){
+            if (self.delegate && [self.delegate respondsToSelector:@selector(openNewTab:)]){
+                [self.delegate openNewTab:url];
+            } else {
+                DDLogWarn(@"没有实现多tab回调");
+            }
+        } else {
+            BaseWindowController *windowController = [[BaseWindowController alloc] initWithTitle:@"页面" withController:[[CommonBrowserViewController alloc] initWithUrl:url]];
+            [windowController showWindow:nil];
+        }
     }
     decisionHandler(policy);
 }
@@ -161,12 +197,20 @@
 }
 
 -(void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
-    DDLogInfo(@"导航完成时调用。");
+    DDLogInfo(@"导航完成时调用。title = %@", webView.title);
     [self refreshButtons];
 }
 
 -(void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation withError:(NSError *)error{
     DDLogInfo(@"加载错误时候才调用，错误原因=%@",error);
 }
+
+//- (void)webView:(WebView *)sender didReceiveTitle:(NSString *)title forFrame:(WebFrame *)frame{
+//    DDLogInfo(@"didReceiveTitle=%@",title);
+//}
+//
+//- (void)webView:(WebView *)sender didReceiveIcon:(NSImage *)image forFrame:(WebFrame *)frame{
+//    DDLogInfo(@"didReceiveIcon=%@",image);
+//}
 
 @end

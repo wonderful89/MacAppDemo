@@ -25,6 +25,8 @@
 		7833B1402406101E00943396 /* CommonBrowserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7833B13E2406101E00943396 /* CommonBrowserViewController.xib */; };
 		7833B1432406147200943396 /* CommonAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 7833B1422406147200943396 /* CommonAlert.m */; };
 		7833B14724061A0E00943396 /* DDLogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7833B14524061A0E00943396 /* DDLogManager.m */; };
+		7833B14B2406492600943396 /* MultiTabBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7833B1492406492600943396 /* MultiTabBrowserViewController.m */; };
+		7833B14C2406492600943396 /* MultiTabBrowserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7833B14A2406492600943396 /* MultiTabBrowserViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,9 @@
 		7833B1422406147200943396 /* CommonAlert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonAlert.m; sourceTree = "<group>"; };
 		7833B14524061A0E00943396 /* DDLogManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLogManager.m; sourceTree = "<group>"; };
 		7833B14624061A0E00943396 /* DDLogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLogManager.h; sourceTree = "<group>"; };
+		7833B1482406492600943396 /* MultiTabBrowserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiTabBrowserViewController.h; sourceTree = "<group>"; };
+		7833B1492406492600943396 /* MultiTabBrowserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiTabBrowserViewController.m; sourceTree = "<group>"; };
+		7833B14A2406492600943396 /* MultiTabBrowserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultiTabBrowserViewController.xib; sourceTree = "<group>"; };
 		90CF2446E2781165DF7B6DDB /* Pods-FirstMac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstMac.debug.xcconfig"; path = "Target Support Files/Pods-FirstMac/Pods-FirstMac.debug.xcconfig"; sourceTree = "<group>"; };
 		EE7DA647D7D1D83FB035B3A1 /* Pods-FirstMac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstMac.release.xcconfig"; path = "Target Support Files/Pods-FirstMac/Pods-FirstMac.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -219,6 +224,9 @@
 				7833B13C2406101E00943396 /* CommonBrowserViewController.h */,
 				7833B13D2406101E00943396 /* CommonBrowserViewController.m */,
 				7833B13E2406101E00943396 /* CommonBrowserViewController.xib */,
+				7833B1482406492600943396 /* MultiTabBrowserViewController.h */,
+				7833B1492406492600943396 /* MultiTabBrowserViewController.m */,
+				7833B14A2406492600943396 /* MultiTabBrowserViewController.xib */,
 			);
 			path = Browser;
 			sourceTree = "<group>";
@@ -292,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7833B1402406101E00943396 /* CommonBrowserViewController.xib in Resources */,
+				7833B14C2406492600943396 /* MultiTabBrowserViewController.xib in Resources */,
 				7833B13A2405314F00943396 /* ButtonViewController.xib in Resources */,
 				7817584323F3D11D006117D4 /* Assets.xcassets in Resources */,
 				7817584623F3D11D006117D4 /* Main.storyboard in Resources */,
@@ -358,6 +367,7 @@
 				7829A4B723FE99E400945F9B /* BaseWindowController.m in Sources */,
 				7817584923F3D11D006117D4 /* main.m in Sources */,
 				7829A4BE23FF6BC900945F9B /* BaseTableCellView.m in Sources */,
+				7833B14B2406492600943396 /* MultiTabBrowserViewController.m in Sources */,
 				7833B1392405314F00943396 /* ButtonViewController.m in Sources */,
 				7817583E23F3D118006117D4 /* AppDelegate.m in Sources */,
 			);

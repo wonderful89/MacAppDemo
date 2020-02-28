@@ -10,7 +10,21 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class CommonBrowserViewController;
+
+@protocol CommonBrowserViewControllerDelegate <NSObject>
+
+@optional
+- (void)openNewTab:(NSString *)url;
+- (void)updateTitle:(NSString *)title withController:(CommonBrowserViewController *)vc;
+
+@end
+
+#pragma mark - CommonBrowserViewController
 @interface CommonBrowserViewController : NSViewController
+
+@property(assign)BOOL multiTab;
+@property(weak)id<CommonBrowserViewControllerDelegate> delegate;
 
 - (instancetype)initWithUrl:(NSString *)url;
 
