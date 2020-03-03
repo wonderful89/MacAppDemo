@@ -35,7 +35,7 @@
 }
 
 - (void)configSubView:(NSString *)url withTabItem:(NSTabViewItem *)item{
-    CommonBrowserViewController *vc = [CommonBrowserViewController new];
+    CommonBrowserViewController *vc = [[CommonBrowserViewController alloc] initWithUrl:url];
     vc.multiTab = YES;
     vc.delegate = self;
     

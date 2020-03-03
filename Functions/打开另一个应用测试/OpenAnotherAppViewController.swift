@@ -83,6 +83,12 @@ import Cocoa
             task.launchPath = "/usr/bin/open"
             task.arguments = ["\(path)"]
             task.launch()
+         case "openApp2":
+            let path = Bundle.main.path(forResource: "TencentMeeting", ofType: "app")!;
+            let task = Process()
+            task.launchPath = "/usr/bin/open"
+            task.arguments = ["\(path)"]
+            task.launch()
         default:
             //            NSWorkspace.shared.open(URL(fileURLWithPath: "/Applications/Photos.app"))
             //            let _ = Process.launchedProcess(launchPath: "/bin/date", arguments: ["-j -f '%s' 1377223888"])

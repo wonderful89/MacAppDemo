@@ -6,7 +6,8 @@
 #import "Masonry.h"
 
 #import "BaseWindowController.h"
+#import "BaseViewController.h"
 #import "BaseTableCellView.h"
 #import "CommonAlert.h"
 
-static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
+//static const DDLogLevel ddLogLevel = DDLogLevelVerbose;

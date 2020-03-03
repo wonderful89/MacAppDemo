@@ -31,8 +31,11 @@
 		7833B1872408EC8600943396 /* OpenAnotherAppViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7833B1852408EC8600943396 /* OpenAnotherAppViewController.xib */; };
 		7833B18F2409163C00943396 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7833B18D2409163B00943396 /* Default.png */; };
 		7833B1902409182A00943396 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 7833B18C2409163B00943396 /* index.html */; };
-		7833B1912409186B00943396 /* idisk_v1.4.3.8.dmg in Resources */ = {isa = PBXBuildFile; fileRef = 7833B18A240914FE00943396 /* idisk_v1.4.3.8.dmg */; };
-		7833B19324091A9500943396 /* EduPlatformMac.app in Resources */ = {isa = PBXBuildFile; fileRef = 7833B19224091A9400943396 /* EduPlatformMac.app */; };
+		7833B1B0240E080900943396 /* BrowserWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7833B1AE240E080900943396 /* BrowserWebView.m */; };
+		7833B1B2240E0A2A00943396 /* WKCookieWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7833B1B1240E0A2A00943396 /* WKCookieWebView.swift */; };
+		7833B1B6240E38BA00943396 /* WebViewProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7833B1B4240E38BA00943396 /* WebViewProcess.swift */; };
+		7833B1B7240E38BA00943396 /* WebViewProcess.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7833B1B5240E38BA00943396 /* WebViewProcess.xib */; };
+		7833B1B9240E399700943396 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7833B1B8240E399700943396 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,10 +79,15 @@
 		7833B1832408EC8500943396 /* FirstMac-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FirstMac-Bridging-Header.h"; sourceTree = "<group>"; };
 		7833B1842408EC8600943396 /* OpenAnotherAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAnotherAppViewController.swift; sourceTree = "<group>"; };
 		7833B1852408EC8600943396 /* OpenAnotherAppViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenAnotherAppViewController.xib; sourceTree = "<group>"; };
-		7833B18A240914FE00943396 /* idisk_v1.4.3.8.dmg */ = {isa = PBXFileReference; lastKnownFileType = file; path = idisk_v1.4.3.8.dmg; sourceTree = "<group>"; };
 		7833B18C2409163B00943396 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		7833B18D2409163B00943396 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		7833B19224091A9400943396 /* EduPlatformMac.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = EduPlatformMac.app; sourceTree = "<group>"; };
+		7833B1AD240DFD9A00943396 /* libswiftSafariServices.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftSafariServices.tbd; path = usr/lib/swift/libswiftSafariServices.tbd; sourceTree = SDKROOT; };
+		7833B1AE240E080900943396 /* BrowserWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowserWebView.m; sourceTree = "<group>"; };
+		7833B1AF240E080900943396 /* BrowserWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowserWebView.h; sourceTree = "<group>"; };
+		7833B1B1240E0A2A00943396 /* WKCookieWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKCookieWebView.swift; sourceTree = "<group>"; };
+		7833B1B4240E38BA00943396 /* WebViewProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewProcess.swift; sourceTree = "<group>"; };
+		7833B1B5240E38BA00943396 /* WebViewProcess.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebViewProcess.xib; sourceTree = "<group>"; };
+		7833B1B8240E399700943396 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		90CF2446E2781165DF7B6DDB /* Pods-FirstMac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstMac.debug.xcconfig"; path = "Target Support Files/Pods-FirstMac/Pods-FirstMac.debug.xcconfig"; sourceTree = "<group>"; };
 		EE7DA647D7D1D83FB035B3A1 /* Pods-FirstMac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstMac.release.xcconfig"; path = "Target Support Files/Pods-FirstMac/Pods-FirstMac.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +107,7 @@
 		0E52C557005F9EB46ED45080 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7833B1AD240DFD9A00943396 /* libswiftSafariServices.tbd */,
 				1749C6E1E51B7FF0B714E3DE /* Pods_FirstMac.framework */,
 			);
 			name = Frameworks;
@@ -138,12 +147,10 @@
 		7817583B23F3D118006117D4 /* FirstMac */ = {
 			isa = PBXGroup;
 			children = (
-				7833B19224091A9400943396 /* EduPlatformMac.app */,
 				7833B18B2409163B00943396 /* Web */,
 				7817583C23F3D118006117D4 /* AppDelegate.h */,
 				7817583D23F3D118006117D4 /* AppDelegate.m */,
 				7817583F23F3D118006117D4 /* ViewController.h */,
-				7833B18A240914FE00943396 /* idisk_v1.4.3.8.dmg */,
 				7817584023F3D118006117D4 /* ViewController.m */,
 				7833B1832408EC8500943396 /* FirstMac-Bridging-Header.h */,
 				7829A4B823FE9E3700945F9B /* PrefixHeader.pch */,
@@ -239,12 +246,16 @@
 		7833B13B24060FFF00943396 /* 浏览器测试 */ = {
 			isa = PBXGroup;
 			children = (
+				7833B1B3240E386D00943396 /* process */,
+				7833B1AF240E080900943396 /* BrowserWebView.h */,
+				7833B1AE240E080900943396 /* BrowserWebView.m */,
 				7833B13C2406101E00943396 /* CommonBrowserViewController.h */,
 				7833B13D2406101E00943396 /* CommonBrowserViewController.m */,
 				7833B13E2406101E00943396 /* CommonBrowserViewController.xib */,
 				7833B1482406492600943396 /* MultiTabBrowserViewController.h */,
 				7833B1492406492600943396 /* MultiTabBrowserViewController.m */,
 				7833B14A2406492600943396 /* MultiTabBrowserViewController.xib */,
+				7833B1B1240E0A2A00943396 /* WKCookieWebView.swift */,
 			);
 			path = "浏览器测试";
 			sourceTree = "<group>";
@@ -274,6 +285,16 @@
 				7833B18D2409163B00943396 /* Default.png */,
 			);
 			path = Web;
+			sourceTree = "<group>";
+		};
+		7833B1B3240E386D00943396 /* process */ = {
+			isa = PBXGroup;
+			children = (
+				7833B1B4240E38BA00943396 /* WebViewProcess.swift */,
+				7833B1B8240E399700943396 /* WebViewController.swift */,
+				7833B1B5240E38BA00943396 /* WebViewProcess.xib */,
+			);
+			path = process;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,10 +357,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7833B1B7240E38BA00943396 /* WebViewProcess.xib in Resources */,
 				7833B1402406101E00943396 /* CommonBrowserViewController.xib in Resources */,
 				7833B1902409182A00943396 /* index.html in Resources */,
-				7833B19324091A9500943396 /* EduPlatformMac.app in Resources */,
-				7833B1912409186B00943396 /* idisk_v1.4.3.8.dmg in Resources */,
 				7833B14C2406492600943396 /* MultiTabBrowserViewController.xib in Resources */,
 				7833B18F2409163C00943396 /* Default.png in Resources */,
 				7833B13A2405314F00943396 /* ButtonViewController.xib in Resources */,
@@ -398,19 +418,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7833B1B9240E399700943396 /* WebViewController.swift in Sources */,
 				7829A4C223FFB21700945F9B /* WindowViewController.m in Sources */,
 				7833B1432406147200943396 /* CommonAlert.m in Sources */,
 				7833B12F2403F19200943396 /* BaseViewController.m in Sources */,
+				7833B1B2240E0A2A00943396 /* WKCookieWebView.swift in Sources */,
 				7817585323F42A78006117D4 /* LoginViewController.m in Sources */,
 				7829A4BB23FEA18400945F9B /* MainViewController.m in Sources */,
 				7817584123F3D118006117D4 /* ViewController.m in Sources */,
 				7833B14724061A0E00943396 /* DDLogManager.m in Sources */,
 				7833B1862408EC8600943396 /* OpenAnotherAppViewController.swift in Sources */,
+				7833B1B0240E080900943396 /* BrowserWebView.m in Sources */,
 				7833B13F2406101E00943396 /* CommonBrowserViewController.m in Sources */,
 				7829A4B723FE99E400945F9B /* BaseWindowController.m in Sources */,
 				7817584923F3D11D006117D4 /* main.m in Sources */,
 				7829A4BE23FF6BC900945F9B /* BaseTableCellView.m in Sources */,
 				7833B14B2406492600943396 /* MultiTabBrowserViewController.m in Sources */,
+				7833B1B6240E38BA00943396 /* WebViewProcess.swift in Sources */,
 				7833B1392405314F00943396 /* ButtonViewController.m in Sources */,
 				7817583E23F3D118006117D4 /* AppDelegate.m in Sources */,
 			);
