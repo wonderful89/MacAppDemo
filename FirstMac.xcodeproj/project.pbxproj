@@ -36,6 +36,10 @@
 		7833B1B6240E38BA00943396 /* WebViewProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7833B1B4240E38BA00943396 /* WebViewProcess.swift */; };
 		7833B1B7240E38BA00943396 /* WebViewProcess.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7833B1B5240E38BA00943396 /* WebViewProcess.xib */; };
 		7833B1B9240E399700943396 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7833B1B8240E399700943396 /* WebViewController.swift */; };
+		78784AD624153A3E00695919 /* MuiTabWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78784AD424153A3E00695919 /* MuiTabWindowController.swift */; };
+		78784AD724153A3E00695919 /* MuiTabWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78784AD524153A3E00695919 /* MuiTabWindowController.xib */; };
+		78784AD92415499900695919 /* MuiWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78784AD82415499900695919 /* MuiWindow.swift */; };
+		78784ADB24154F4E00695919 /* TabManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78784ADA24154F4E00695919 /* TabManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +92,10 @@
 		7833B1B4240E38BA00943396 /* WebViewProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewProcess.swift; sourceTree = "<group>"; };
 		7833B1B5240E38BA00943396 /* WebViewProcess.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebViewProcess.xib; sourceTree = "<group>"; };
 		7833B1B8240E399700943396 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		78784AD424153A3E00695919 /* MuiTabWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuiTabWindowController.swift; sourceTree = "<group>"; };
+		78784AD524153A3E00695919 /* MuiTabWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MuiTabWindowController.xib; sourceTree = "<group>"; };
+		78784AD82415499900695919 /* MuiWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuiWindow.swift; sourceTree = "<group>"; };
+		78784ADA24154F4E00695919 /* TabManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabManager.swift; sourceTree = "<group>"; };
 		90CF2446E2781165DF7B6DDB /* Pods-FirstMac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstMac.debug.xcconfig"; path = "Target Support Files/Pods-FirstMac/Pods-FirstMac.debug.xcconfig"; sourceTree = "<group>"; };
 		EE7DA647D7D1D83FB035B3A1 /* Pods-FirstMac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstMac.release.xcconfig"; path = "Target Support Files/Pods-FirstMac/Pods-FirstMac.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -175,6 +183,7 @@
 		7829A4B023FE997F00945F9B /* Functions */ = {
 			isa = PBXGroup;
 			children = (
+				78784AD324153A1700695919 /* 多Tab的窗口 */,
 				7833B1822408EC3800943396 /* 打开另一个应用测试 */,
 				7833B13B24060FFF00943396 /* 浏览器测试 */,
 				7833B1352405312C00943396 /* UI */,
@@ -297,6 +306,17 @@
 			path = process;
 			sourceTree = "<group>";
 		};
+		78784AD324153A1700695919 /* 多Tab的窗口 */ = {
+			isa = PBXGroup;
+			children = (
+				78784AD424153A3E00695919 /* MuiTabWindowController.swift */,
+				78784AD524153A3E00695919 /* MuiTabWindowController.xib */,
+				78784AD82415499900695919 /* MuiWindow.swift */,
+				78784ADA24154F4E00695919 /* TabManager.swift */,
+			);
+			path = "多Tab的窗口";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -366,6 +386,7 @@
 				7817584323F3D11D006117D4 /* Assets.xcassets in Resources */,
 				7833B1872408EC8600943396 /* OpenAnotherAppViewController.xib in Resources */,
 				7817584623F3D11D006117D4 /* Main.storyboard in Resources */,
+				78784AD724153A3E00695919 /* MuiTabWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,10 +440,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7833B1B9240E399700943396 /* WebViewController.swift in Sources */,
+				78784AD624153A3E00695919 /* MuiTabWindowController.swift in Sources */,
 				7829A4C223FFB21700945F9B /* WindowViewController.m in Sources */,
 				7833B1432406147200943396 /* CommonAlert.m in Sources */,
+				78784AD92415499900695919 /* MuiWindow.swift in Sources */,
 				7833B12F2403F19200943396 /* BaseViewController.m in Sources */,
 				7833B1B2240E0A2A00943396 /* WKCookieWebView.swift in Sources */,
+				78784ADB24154F4E00695919 /* TabManager.swift in Sources */,
 				7817585323F42A78006117D4 /* LoginViewController.m in Sources */,
 				7829A4BB23FEA18400945F9B /* MainViewController.m in Sources */,
 				7817584123F3D118006117D4 /* ViewController.m in Sources */,

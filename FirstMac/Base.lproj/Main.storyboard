@@ -609,6 +609,11 @@
                                                 <action selector="toggleToolbarShown:" target="Ady-hI-5gd" id="BXY-wc-z0C"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem title="New Tab" keyEquivalent="t" id="yn3-1U-qZK">
+                                            <connections>
+                                                <action selector="newWindowForTab:" target="Ady-hI-5gd" id="i3g-SS-auG"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem title="Customize Toolbar…" id="1UK-8n-QPP">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>

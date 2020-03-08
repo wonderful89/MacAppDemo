@@ -25,6 +25,7 @@ static NSString* row6 = @"多TabBrowser";
 static NSString* row6_2 = @"测试WKWebview";
 static NSString* row7 = @"打开另一个应用测试";
 static NSString* row8 = @"打开SafariApp";
+static NSString* row9 = @"多Tab的window";
 static NSString* rowLast = @"Last";
 
 @interface MainViewController ()<NSTableViewDelegate, NSTableViewDataSource>
@@ -57,6 +58,7 @@ static NSString* rowLast = @"Last";
                    row6_2,
                    row7,
                    row8,
+                   row9,
                    rowLast
     ];
     [self.view addSubview:self.scrollView];
@@ -151,6 +153,12 @@ static NSString* rowLast = @"Last";
         [SFSafariApplication openWindowWithURL:[NSURL URLWithString:@"http://docs.qq.com"] completionHandler:^(SFSafariWindow * _Nullable window) {
             DDLogInfo(@"window = %@",window);
         }];
+    } else if ([testContent isEqualToString:row9]){
+        MuiTabWindowController *windowController = [[MuiTabWindowController alloc] initWithWindowNibName: @"MuiTabWindowController"];
+//        [windowController.window makeMainWindow];
+//        [windowController.window makeKeyAndOrderFront:self.view.window];
+        [windowController showWindow:nil];
+//        [self.view.window close];
     }
     
     [self.tableView deselectRow:tableView.selectedRow];
