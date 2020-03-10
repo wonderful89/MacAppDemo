@@ -26,6 +26,7 @@ static NSString* row6_2 = @"测试WKWebview";
 static NSString* row7 = @"打开另一个应用测试";
 static NSString* row8 = @"打开SafariApp";
 static NSString* row9 = @"多Tab的window";
+static NSString* row10 = @"Markdown查看";
 static NSString* rowLast = @"Last";
 
 @interface MainViewController ()<NSTableViewDelegate, NSTableViewDataSource>
@@ -59,6 +60,7 @@ static NSString* rowLast = @"Last";
                    row7,
                    row8,
                    row9,
+                   row10,
                    rowLast
     ];
     [self.view addSubview:self.scrollView];
@@ -114,13 +116,13 @@ static NSString* rowLast = @"Last";
     if ([testContent isEqualToString:row1]){
         self.modelWindowController = [[BaseWindowController alloc] initWithTitle:@"window" withController:[WindowViewController new]];
         NSWindow *theModalWindow = self.modelWindowController.window;
-//        [[NSApplication sharedApplication] runModalForWindow:theModalWindow];
+        //        [[NSApplication sharedApplication] runModalForWindow:theModalWindow];
         
         [theModalWindow makeKeyWindow];
         NSInteger retVal = [NSApp runModalForWindow:theModalWindow];
         NSLog(@"retValue = %ld", retVal);
-//        [theModalWindow close];
-//        //continue and do somethin according the value in retVal
+        //        [theModalWindow close];
+        //        //continue and do somethin according the value in retVal
         [[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
         
     } else if ([testContent isEqualToString:row1_2]){
@@ -155,10 +157,22 @@ static NSString* rowLast = @"Last";
         }];
     } else if ([testContent isEqualToString:row9]){
         MuiTabWindowController *windowController = [[MuiTabWindowController alloc] initWithWindowNibName: @"MuiTabWindowController"];
-//        [windowController.window makeMainWindow];
-//        [windowController.window makeKeyAndOrderFront:self.view.window];
+        //        [windowController.window makeMainWindow];
+        //        [windowController.window makeKeyAndOrderFront:self.view.window];
         [windowController showWindow:nil];
-//        [self.view.window close];
+        //        [self.view.window close];
+    } else if ([testContent isEqualToString:row10]){
+        MarkdownViewController *vc = [MarkdownViewController new];
+        NSString *contentStr = @"# aaa \n \
+        name | 价格 |  数量\n \
+        -|-|-\n \
+        香蕉 | $1 | 5 |\n \
+        苹果 | $1 | 6 |\n \
+        草莓 | $1 | 7 |";
+        contentStr = @"# aaa\n\nname1 | 价格 |  数量  \n-|-|-\n香蕉 | $1 | 5 |\n苹果 | $1 | 6 |\n草莓 | $1 | 7 |";
+        vc.contentStr = contentStr;
+        BaseWindowController *windowController = [[BaseWindowController alloc] initWithTitle:@"内容" withController:vc];
+        [windowController showWindow:nil];
     }
     
     [self.tableView deselectRow:tableView.selectedRow];

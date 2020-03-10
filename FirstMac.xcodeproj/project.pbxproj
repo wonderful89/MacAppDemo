@@ -40,6 +40,14 @@
 		78784AD724153A3E00695919 /* MuiTabWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78784AD524153A3E00695919 /* MuiTabWindowController.xib */; };
 		78784AD92415499900695919 /* MuiWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78784AD82415499900695919 /* MuiWindow.swift */; };
 		78784ADB24154F4E00695919 /* TabManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78784ADA24154F4E00695919 /* TabManager.swift */; };
+		78784AE42417D2CC00695919 /* HTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78784AE32417D2CC00695919 /* HTML.swift */; };
+		78784AE62417D31700695919 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78784AE52417D31700695919 /* Theme.swift */; };
+		78784AE82417D57700695919 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78784AE72417D57700695919 /* String.swift */; };
+		78784AEA2417D63100695919 /* NSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78784AE92417D63100695919 /* NSColor.swift */; };
+		78784AED2417E05000695919 /* MarkdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78784AEB2417E05000695919 /* MarkdownViewController.swift */; };
+		78784AEE2417E05000695919 /* MarkdownViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78784AEC2417E05000695919 /* MarkdownViewController.xib */; };
+		78784AF72417E76400695919 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78784AF52417E76400695919 /* Preferences.swift */; };
+		78784AF82417E76400695919 /* PreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78784AF62417E76400695919 /* PreferenceKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +104,14 @@
 		78784AD524153A3E00695919 /* MuiTabWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MuiTabWindowController.xib; sourceTree = "<group>"; };
 		78784AD82415499900695919 /* MuiWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuiWindow.swift; sourceTree = "<group>"; };
 		78784ADA24154F4E00695919 /* TabManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabManager.swift; sourceTree = "<group>"; };
+		78784AE32417D2CC00695919 /* HTML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTML.swift; sourceTree = "<group>"; };
+		78784AE52417D31700695919 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		78784AE72417D57700695919 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		78784AE92417D63100695919 /* NSColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSColor.swift; sourceTree = "<group>"; };
+		78784AEB2417E05000695919 /* MarkdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownViewController.swift; sourceTree = "<group>"; };
+		78784AEC2417E05000695919 /* MarkdownViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarkdownViewController.xib; sourceTree = "<group>"; };
+		78784AF52417E76400695919 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		78784AF62417E76400695919 /* PreferenceKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferenceKey.swift; sourceTree = "<group>"; };
 		90CF2446E2781165DF7B6DDB /* Pods-FirstMac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstMac.debug.xcconfig"; path = "Target Support Files/Pods-FirstMac/Pods-FirstMac.debug.xcconfig"; sourceTree = "<group>"; };
 		EE7DA647D7D1D83FB035B3A1 /* Pods-FirstMac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstMac.release.xcconfig"; path = "Target Support Files/Pods-FirstMac/Pods-FirstMac.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -183,6 +199,7 @@
 		7829A4B023FE997F00945F9B /* Functions */ = {
 			isa = PBXGroup;
 			children = (
+				78784ADE2417D20800695919 /* Markdown查看 */,
 				78784AD324153A1700695919 /* 多Tab的窗口 */,
 				7833B1822408EC3800943396 /* 打开另一个应用测试 */,
 				7833B13B24060FFF00943396 /* 浏览器测试 */,
@@ -317,6 +334,29 @@
 			path = "多Tab的窗口";
 			sourceTree = "<group>";
 		};
+		78784ADE2417D20800695919 /* Markdown查看 */ = {
+			isa = PBXGroup;
+			children = (
+				78784AF42417E76400695919 /* Preferences */,
+				78784AEB2417E05000695919 /* MarkdownViewController.swift */,
+				78784AEC2417E05000695919 /* MarkdownViewController.xib */,
+				78784AE72417D57700695919 /* String.swift */,
+				78784AE92417D63100695919 /* NSColor.swift */,
+				78784AE52417D31700695919 /* Theme.swift */,
+				78784AE32417D2CC00695919 /* HTML.swift */,
+			);
+			path = "Markdown查看";
+			sourceTree = "<group>";
+		};
+		78784AF42417E76400695919 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				78784AF52417E76400695919 /* Preferences.swift */,
+				78784AF62417E76400695919 /* PreferenceKey.swift */,
+			);
+			path = Preferences;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -378,6 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7833B1B7240E38BA00943396 /* WebViewProcess.xib in Resources */,
+				78784AEE2417E05000695919 /* MarkdownViewController.xib in Resources */,
 				7833B1402406101E00943396 /* CommonBrowserViewController.xib in Resources */,
 				7833B1902409182A00943396 /* index.html in Resources */,
 				7833B14C2406492600943396 /* MultiTabBrowserViewController.xib in Resources */,
@@ -451,14 +492,21 @@
 				7829A4BB23FEA18400945F9B /* MainViewController.m in Sources */,
 				7817584123F3D118006117D4 /* ViewController.m in Sources */,
 				7833B14724061A0E00943396 /* DDLogManager.m in Sources */,
+				78784AE62417D31700695919 /* Theme.swift in Sources */,
+				78784AEA2417D63100695919 /* NSColor.swift in Sources */,
+				78784AE82417D57700695919 /* String.swift in Sources */,
 				7833B1862408EC8600943396 /* OpenAnotherAppViewController.swift in Sources */,
 				7833B1B0240E080900943396 /* BrowserWebView.m in Sources */,
 				7833B13F2406101E00943396 /* CommonBrowserViewController.m in Sources */,
 				7829A4B723FE99E400945F9B /* BaseWindowController.m in Sources */,
 				7817584923F3D11D006117D4 /* main.m in Sources */,
+				78784AE42417D2CC00695919 /* HTML.swift in Sources */,
 				7829A4BE23FF6BC900945F9B /* BaseTableCellView.m in Sources */,
+				78784AF72417E76400695919 /* Preferences.swift in Sources */,
 				7833B14B2406492600943396 /* MultiTabBrowserViewController.m in Sources */,
 				7833B1B6240E38BA00943396 /* WebViewProcess.swift in Sources */,
+				78784AF82417E76400695919 /* PreferenceKey.swift in Sources */,
+				78784AED2417E05000695919 /* MarkdownViewController.swift in Sources */,
 				7833B1392405314F00943396 /* ButtonViewController.m in Sources */,
 				7817583E23F3D118006117D4 /* AppDelegate.m in Sources */,
 			);
@@ -606,7 +654,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.qianzhao.test.FirstMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -635,7 +683,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.qianzhao.test.FirstMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

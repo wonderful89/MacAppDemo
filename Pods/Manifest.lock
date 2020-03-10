@@ -12,14 +12,18 @@ PODS:
   - AFNetworking/Reachability (3.2.1)
   - AFNetworking/Security (3.2.1)
   - AFNetworking/Serialization (3.2.1)
+  - cmark-gfm-swift (0.1.0)
   - CocoaLumberjack/Core (3.6.1)
   - CocoaLumberjack/Swift (3.6.1):
     - CocoaLumberjack/Core
+  - Highlightr (2.1.0)
   - Masonry (1.1.0)
 
 DEPENDENCIES:
   - AFNetworking
+  - cmark-gfm-swift (from `https://github.com/lukakerr/cmark-gfm-swift.git`)
   - CocoaLumberjack/Swift
+  - Highlightr (from `https://github.com/lukakerr/Highlightr.git`)
   - Masonry
 
 SPEC REPOS:
@@ -28,11 +32,27 @@ SPEC REPOS:
     - CocoaLumberjack
     - Masonry
 
+EXTERNAL SOURCES:
+  cmark-gfm-swift:
+    :git: https://github.com/lukakerr/cmark-gfm-swift.git
+  Highlightr:
+    :git: https://github.com/lukakerr/Highlightr.git
+
+CHECKOUT OPTIONS:
+  cmark-gfm-swift:
+    :commit: 7f6846ba6fc0117d7a6f3a34d1bb438488b1c552
+    :git: https://github.com/lukakerr/cmark-gfm-swift.git
+  Highlightr:
+    :commit: 31e3d89c9635ec2967ec7bf7f3d14a4a85041bbf
+    :git: https://github.com/lukakerr/Highlightr.git
+
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  cmark-gfm-swift: 9915dfe0cd7feda740ab01fc2a1882989b6d5128
   CocoaLumberjack: b17ae15142558d08bbacf69775fa10c4abbebcc9
+  Highlightr: 683f05d5223cade533a78528a35c9f06e4caddf8
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
-PODFILE CHECKSUM: 0483994f6d10c4d55c7b80321d0392b8c5007bf6
+PODFILE CHECKSUM: fa2fda00a511ee50bd60dcba780c7e1d2aad0227
 
 COCOAPODS: 1.8.4

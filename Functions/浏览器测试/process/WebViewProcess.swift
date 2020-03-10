@@ -46,13 +46,26 @@ import Cocoa
         if (title == "cookie"){
             var contentStr = ""
             let cookies: [HTTPCookie?] = HTTPCookieStorage.shared.cookies ?? [];
+            contentStr += "名字 | 值 |  域 | 路径 \n"
+            contentStr += "-|-|-|- \n"
             for cookie in cookies {
-                let name = cookie?.name ?? ""
-                let domain = cookie?.domain ?? ""
-                let value = cookie?.value ?? ""
-                contentStr += name + "\t" + domain + "\t" + value + "\n"
+                var lineStr = ""
+                lineStr += cookie?.name ?? ""
+                lineStr += " | "
+                lineStr += cookie?.domain ?? ""
+                lineStr += " | "
+                lineStr += cookie?.value ?? ""
+                lineStr += " | "
+                lineStr += cookie?.path ?? ""
+                lineStr += "\n"
+                contentStr += lineStr
             }
-            CommonAlert.alert(withTitle: "cookie", withContent: contentStr)
+//            CommonAlert.alert(withTitle: "cookie", withContent: contentStr)
+            let vc = MarkdownViewController();
+            vc.contentStr = contentStr;
+            let windowController = BaseWindowController.init(title: "cookie", with: vc);
+            windowController.showWindow(nil);
+            
         } else if (title == "other"){
             
         }
